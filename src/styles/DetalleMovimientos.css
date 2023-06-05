@@ -1,0 +1,27 @@
+.Container-detalle-movimiento, .container-categoria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-categoria{
+    margin-right: 100px;
+}
+
+.container-categoria label{
+    font-size: 19px;
+}
+
+.container-img-detalle{
+    border-radius: 50%;
+    background-color: #27a781;
+}
+
+.img-detalle-movimiento{
+    width: 20px;
+    height: 20px;
+}
+
+.Container-detalle-movimiento h4{
+    font-size: 18px;
+}

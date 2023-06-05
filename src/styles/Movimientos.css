@@ -11,14 +11,15 @@
     cursor: pointer;
 }
 
-.container-movimientos h3{
+.container-movimientos h3 {
     font-size: 18px;
 }
+
 .container-card:hover {
     background-color: beige;
 }
 
-.container-fecha-numero{
+.container-fecha-numero {
     font-size: 35px;
     margin-right: 5px;
 }
@@ -30,26 +31,46 @@
     justify-content: flex-end;
     margin-left: 100px;
 }
-.movimiento-ingreso{
+
+.movimiento-ingreso {
     color: #27a781;
 }
 
-.movimiento-gasto{
+.movimiento-gasto {
     color: #d41f1f;
 }
 
+.container-oculto {
+    display: none;
+}
+
+.container-oculto-visible {
+    margin-top: 10px;
+    display: block;
+    background-color: rgba(226, 251, 231, 0.577);
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
 @media (max-width: 768px) {
     .container-card {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .container-movimientos {
-      margin-left: 0;
-      margin-top: 10px;
-      align-items: center;
+        margin-left: 0;
+        margin-top: 10px;
+        align-items: center;
     }
-    
+
     .container-fecha-numero {
-      font-size: 25px;
+        font-size: 25px;
     }
-  }
+}

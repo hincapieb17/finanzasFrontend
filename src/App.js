@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState } from 'react';
-import flecha from './img/arrow.png';
 import Rutas from './components/Rutas';
 import { Link } from 'react-router-dom'
 
@@ -28,10 +27,8 @@ function App() {
         </nav>
       </div>
       <div className='container-rutas'>
-        <Rutas></Rutas>
+        <Rutas/>
       </div>
-
-      <img src={flecha} alt="icono" className="icon-img-home" />   
     </div>
   );
 }
