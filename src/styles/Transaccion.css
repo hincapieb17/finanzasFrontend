@@ -1,0 +1,121 @@
+.container-transacciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container-saldo-total {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.container-saldo-total p {
+    font-size: 20px;
+}
+
+.container-saldo-total h2 {
+    font-size: 30px;
+}
+
+.container-resumen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.balance {
+    transform: rotate(-90deg);
+}
+
+
+.container-resumen>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+    max-width: 20%;
+    text-align: center;
+}
+
+.container-resumen label {
+    font-size: 20px;
+}
+
+.container-resumen h4 {
+    font-size: 25px;
+}
+
+.container-ingreso h4{
+    color: #27a781;
+}
+
+.container-gasto h4{
+    color: #d41f1f;
+}
+
+.container-bonotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.container-bonotes button {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.boton-gasto:hover {
+    background-color: rgb(250, 215, 215);
+}
+
+.boton-ingreso:hover {
+    background-color: rgb(220, 250, 215);
+}
+
+.icon-img-botones{
+    width: 22px;
+}
+
+
+.container-movimientos-op {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    width: 95%;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .container-movimientos-op {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-movimientos-op {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

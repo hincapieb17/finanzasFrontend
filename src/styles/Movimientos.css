@@ -1,0 +1,55 @@
+.container-card {
+    background-color: #fff;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.container-movimientos h3{
+    font-size: 18px;
+}
+.container-card:hover {
+    background-color: beige;
+}
+
+.container-fecha-numero{
+    font-size: 35px;
+    margin-right: 5px;
+}
+
+.container-movimientos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left: 100px;
+}
+.movimiento-ingreso{
+    color: #27a781;
+}
+
+.movimiento-gasto{
+    color: #d41f1f;
+}
+
+@media (max-width: 768px) {
+    .container-card {
+      flex-direction: column;
+    }
+  
+    .container-movimientos {
+      margin-left: 0;
+      margin-top: 10px;
+      align-items: center;
+    }
+    
+    .container-fecha-numero {
+      font-size: 25px;
+    }
+  }

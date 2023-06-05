@@ -1,0 +1,50 @@
+.container-navbar {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.titulo-app {
+  font-size: 34px;
+  margin: 0;
+}
+
+.nav-app {
+  margin-top: 10px;
+}
+
+.ul-app {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  justify-content: center; 
+}
+
+.ul-app li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ul-app li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 10px;
+  font-size: 24px;
+  margin: 30px;
+}
+
+.ul-app li a:hover {
+  border-bottom: 3px solid #333;
+}
+
+.container-rutas{
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+
+
+.icon-img-home {
+  width: 30px;
+}
