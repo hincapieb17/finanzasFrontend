@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import imagenSrc from '../img/categorias/Regalo.png';
 import '../styles/DetalleMovimientos.css'
 

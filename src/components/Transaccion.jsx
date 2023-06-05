@@ -1,13 +1,29 @@
-import React from "react";
-import '../styles/Transaccion.css'
+import React, { useState, useEffect } from "react";
+import '../styles/Transaccion.css';
 import { format, getYear } from 'date-fns';
 import IconoIngreso from '../img/arrow.png';
 import IconoGasto from '../img/down.png';
 import IconoBalance from '../img/down-arrow.png';
-import Periodo from "../img/calendar.png"
+import Periodo from "../img/calendar.png";
 import Movimientos from './Movimientos';
+import Modal from 'react-modal';
 
 const Transaccion = () => {
+
+    const [modalIngreso, setModalIngreso] = useState(false);
+    const [modalGasto, setModalGasto] = useState(false);
+
+    const abrirModalIngreso = () => {
+        setModalIngreso(true);
+    }
+
+    const abrirModalGasto = () => {
+        setModalGasto(true);
+    }
+
+    useEffect(() => {
+        Modal.setAppElement('#root');
+    }, []);
 
     const date = new Date();
     const month = format(date, 'MMMM'); 
@@ -15,6 +31,14 @@ const Transaccion = () => {
 
     return (
         <div className="container-transacciones">
+            <Modal isOpen={modalIngreso}>
+
+            </Modal>
+
+            <Modal isOpen={modalGasto}>
+
+            </Modal>
+
             <div className="container-saldo-total">
                 <p className="saldo">Saldo total</p>
                 <h2 className="total">$ 2.000.000,00</h2>
@@ -43,11 +67,11 @@ const Transaccion = () => {
                 </div>
             </div>
             <div className="container-bonotes">
-                <button className="boton-ingreso">
+                <button className="boton-ingreso" onClick={abrirModalIngreso}>
                     <img src={IconoIngreso} alt="icono" className="icon-img-botones" />
                     Ingreso
                 </button>
-                <button className="boton-gasto">
+                <button className="boton-gasto" onClick={abrirModalGasto}>
                     <img src={IconoGasto} alt="icono" className="icon-img-botones" />
                     Gasto
                 </button>
