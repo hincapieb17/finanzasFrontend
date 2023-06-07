@@ -1,0 +1,72 @@
+.container-agregar-transaccion {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.container-agregar-transaccion h2 {
+    margin: auto;
+}
+
+.h2-ingreso{
+    color: #188162;
+}
+
+.h2-gasto {
+    color:  #f44336;
+}
+
+.monto-label,
+.categoria-label,
+.detalle-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.monto-input,
+.detalle-input,
+.categoria-section {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.cerrar-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cerrar-button:hover {
+    background-color: #d32f2f;
+}
+
+.guardar-button {
+    background-color: #27a781;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.guardar-button:hover {
+    background-color: #1a795c;
+}

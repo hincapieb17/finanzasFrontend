@@ -7,18 +7,21 @@ import IconoBalance from '../img/down-arrow.png';
 import Periodo from "../img/calendar.png";
 import Movimientos from './Movimientos';
 import Modal from 'react-modal';
+import AgregarTransaccion from "./AgregarTransaccion";
 
 const Transaccion = () => {
 
-    const [modalIngreso, setModalIngreso] = useState(false);
-    const [modalGasto, setModalGasto] = useState(false);
+    const [modalIngresoGasto, setModalIngresoGasto] = useState(false);
+    const [ingresoGasto, setIngresoGasto] = useState(true);
 
     const abrirModalIngreso = () => {
-        setModalIngreso(true);
+        setIngresoGasto(true)
+        setModalIngresoGasto(true);
     }
 
     const abrirModalGasto = () => {
-        setModalGasto(true);
+        setIngresoGasto(false)
+        setModalIngresoGasto(true);
     }
 
     useEffect(() => {
@@ -31,12 +34,8 @@ const Transaccion = () => {
 
     return (
         <div className="container-transacciones">
-            <Modal isOpen={modalIngreso}>
-
-            </Modal>
-
-            <Modal isOpen={modalGasto}>
-
+            <Modal isOpen={modalIngresoGasto} className="modal-ingreso">
+                <AgregarTransaccion setModalIngresoGasto={setModalIngresoGasto} ingresoGasto={ingresoGasto}/>
             </Modal>
 
             <div className="container-saldo-total">
