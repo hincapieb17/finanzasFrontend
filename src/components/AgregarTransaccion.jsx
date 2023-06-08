@@ -12,27 +12,28 @@ const AgregarTransaccion = ({ setModalIngresoGasto, ingresoGasto }) => {
     const [listCategoriaGasto, setListCategoriaGasto] = useState([]);
 
     useEffect(() => {
-        const getListCategoriaIngreso = async () => {
-            try {
-                const respuesta = await GetCategoriaIngreso();
-                setListCategoriaIngreso(respuesta);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        getListCategoriaIngreso();
+        const nuevasCategoriasIngreso = [
+            { id: 1, nombre: "Salario" },
+            { id: 2, nombre: "Inversion" },
+            { id: 3, nombre: "Renta" },
+            { id: 4, nombre: "Salario" }
+        ];
+
+        setListCategoriaIngreso(nuevasCategoriasIngreso);
     }, []);
 
     useEffect(() => {
-        const getListCategoriaGasto = async () => {
-            try {
-                const respuesta = await GetCategoriaGasto();
-                setListCategoriaGasto(respuesta);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        getListCategoriaGasto();
+        const nuevasCategoriasGasto = [
+            { id: 1, nombre: "Alimento" },
+            { id: 2, nombre: "Factura" },
+            { id: 3, nombre: "Transporte" },
+            { id: 4, nombre: "Compra" },
+            { id: 5, nombre: "Regalo" },
+            { id: 6, nombre: "Educacion" },
+            { id: 7, nombre: "Renta" },
+            { id: 8, nombre: "Viaje" },
+        ];
+        setListCategoriaGasto(nuevasCategoriasGasto);
     }, []);
 
 
@@ -43,10 +44,10 @@ const AgregarTransaccion = ({ setModalIngresoGasto, ingresoGasto }) => {
             <input type="number" className="monto-input" />
             <label className="categoria-label">Categoria</label>
             <select className="categoria-section">
-                {(ingresoGasto ?listCategoriaIngreso : listCategoriaGasto ).map((lista) => (
+                {(ingresoGasto ? listCategoriaIngreso : listCategoriaGasto).map((lista) => (
                     <option>{lista.nombre}</option>
                 ))}
-                
+
             </select>
             <label className="detalle-label">Detalle</label>
             <input type="text" className="detalle-input" />
