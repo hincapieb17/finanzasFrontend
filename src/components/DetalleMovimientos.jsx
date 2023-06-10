@@ -1,20 +1,27 @@
 import React from "react";
-import imagenSrc from '../img/categorias/Regalo.png';
 import '../styles/DetalleMovimientos.css'
 
-const DetalleMovimientos = ({ nombreImagen }) => {
-    //const imagenSrc = require(`../img/categorias/${nombreImagen}`).default;
+const DetalleMovimientos = ({ detalle }) => {
+
+    var formattedMonto = "";
+
+    formattedMonto = detalle.monto.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    });
+
 
     return (
         <div className="Container-detalle-movimiento">
             <div className="container-categoria">
-                <div className="container-img-detalle">
-                    <img src={imagenSrc} alt="icono" className="img-detalle-movimiento" />
+                <div className={detalle.tipo === "Ingreso" ? "container-img-detalle" : "container-img-detalle gasto"}>
+                    <img src={require(`../img/categorias/${detalle.categoria}.png`)} alt="icono" className="img-detalle-movimiento" />
                 </div>
-                <label >Regalo</label>
+                <label className="categoria">{detalle.categoria}</label>
             </div>
-
-            <h4>3.000.000,00</h4>
+            <div className="container-monto">
+            <h4 className={detalle.tipo === "Ingreso" ? "h4-verde": "h4-rojo"}>$ {formattedMonto}</h4>
+            </div>
         </div>
     );
 }

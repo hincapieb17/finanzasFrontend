@@ -1,12 +1,17 @@
-.Container-detalle-movimiento, .container-categoria{
+.Container-detalle-movimiento{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 3px;
+    margin: 5px;
 }
 
-.container-categoria{
-    margin-right: 100px;
+.Container-detalle-movimiento .container-categoria{
+    display: flex;
+    margin: auto;
+}
+
+.Container-detalle-movimiento .container-monto{
+    display: flex;
+    margin: auto;
 }
 
 .container-categoria label{
@@ -18,9 +23,26 @@
     background-color: #27a781;
 }
 
+.gasto{
+    background-color: #d41f1f;
+}
+
+.h4-rojo{
+    color: #d41f1f;
+}
+
+.h4-verde{
+    color: #27a781;
+}
+
+.container-categoria .descripcion {
+    font-size: 12px;
+    margin: 5px;
+}
+
 .img-detalle-movimiento{
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
 }
 
 .Container-detalle-movimiento h4{
